@@ -1,0 +1,13 @@
+TFSDR is a SoftwareDefineRadio demodulator for web use.
+It is intended as a backend for a java web applet front end.
+
+TFSDR uses the Intel Performance Primitives for calculations, mainly FFT.
+http://software.intel.com/en-us/articles/intel-ipp/
+Plan to replace with FFTW.
+
+TFSDR uses GNU CgiCC: http://www.gnu.org/software/cgicc/
+
+This code is released under the GPL v3 or later. See COPYING
+
+TFSDR is written by Hrafnkell Eiriksson TF3HR he@klaki.net
+Copyright 2011 Hrafnkell Eiriksson he@klaki.net 
