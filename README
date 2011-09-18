@@ -1,3 +1,6 @@
+About
+-----
+
 TFSDR is a SoftwareDefineRadio demodulator for web use.
 It is intended as a backend for a java web applet front end.
 
@@ -6,8 +9,23 @@ http://software.intel.com/en-us/articles/intel-ipp/
 Plan to replace with FFTW.
 
 TFSDR uses GNU CgiCC: http://www.gnu.org/software/cgicc/
+Your distribution probably has it. On Ubuntu, install libcgicc-dev
 
 This code is released under the GPL v3 or later. See COPYING
 
 TFSDR is written by Hrafnkell Eiriksson TF3HR he@klaki.net
 Copyright 2011 Hrafnkell Eiriksson he@klaki.net 
+
+Usage
+-----
+
+TFSDR is a set of CGIBIN programs that a web frontend can use to get streaming audio from a 
+SDR sampler: sdrsession, sdrfeed, sdrtune and sdrwaterfall.
+
+A frontend first calls sdrsession to get a unique session cookie. This cookie must follow all +
+request to the other TFSDR backend programs. sdrsession also redirects the caller to sdrfeed which
+provides the actual audio stream.
+By calling sdrwaterfall a line by line from a waterfall plot is streamed instead of audio.
+The frontend can also call sdrtune?LO=newfreq to move the listening frequency.
+
+Place the four binaries into a cgi-bin path on your webserver.
